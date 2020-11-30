@@ -34,36 +34,3 @@ class Battle
     { tie: true }
   end
 end
-
-
-english = Civilization.new('English')
-chinese = Civilization.new('Chinese')
-bizantine = Civilization.new('Bizantine')
-
-battle0 = Battle.new(english, english)
-battle0.fight!
-
-battle1 = Battle.new(english, chinese)
-battle1.fight!
-english.armies.train(english.armies.units[4])
-english.armies.transform(english.armies.units[17])
-
-battle2 = Battle.new(english, bizantine)
-battle2.fight!
-bizantine.armies.train(bizantine.armies.units[2])
-bizantine.armies.transform(bizantine.armies.units[9])
-
-battle3 = Battle.new(chinese, bizantine)
-battle3.fight!
-chinese.armies.train(chinese.armies.units[12])
-bizantine.armies.transform(bizantine.armies.units[20])
-
-battle4 = Battle.new(chinese, bizantine)
-battle3.fight!
-chinese.armies.train(chinese.armies.units[12])
-bizantine.armies.transform(bizantine.armies.units[20])
-
-puts "English Battles: #{english.armies.counter}" # Should be 2 battles
-puts "Chinese Battles: #{chinese.armies.counter}" # Should be 3 battles
-puts "Bizantine Battles: #{bizantine.armies.counter}" # Should be 3 battles
-puts "END"

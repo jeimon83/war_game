@@ -26,3 +26,4 @@ class Knight < Unit
   TRAINING_COST = 30
 end
 
+
